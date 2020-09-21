@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section class="main">
+        <img src="img_0.png" class="im">
+        <div class="smartphone">
+            <div class="content">
+            </div>
+            </div>
+    </section>
+    
+
+    <section id="id01"><h1 class="h">THE SIMBA DEVELOPERS</h1></section>
+    <section id="id02"><h1 class="texme" id="id03">PLanning</h1>
+        <h1 class="texme" id="id04">Documentation</h1>
+        <h1 class="texme" id="id05">Execution</h1></section>
+
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+
+      <script>
+          gsap.timeline({
+        scrollTrigger:{
+            trigger:".main",
+            start:"center center",
+            end:"center top",
+            markers:true,
+            scrub:true,
+            pin:true
+        }
+    })
+   
+    .from("im",{opacity:1})
+    .to(".im",{scale:0.3,y:620,duration:5000})
+
+
+    .from(".smartphone",{opacity:0.5})
+
+
+    gsap.timeline({
+        scrollTrigger:{
+            trigger:"#id01",
+            start:"center center",
+            end:"center top",
+            markers:true,
+            scrub:true,
+            pin:true
+        }
+    })
+    .from(".h",{opacity:0.4,scale:10,duration:500})
+
+    gsap.timeline({
+        scrollTrigger:{
+            trigger:"#id02",
+            start:"center center",
+            end:"center top",
+            markers:true,
+            scrub:true,
+            pin:true
+        }
+    })
+    .from("#id03",{color:"orange",scale:2})
+    .from("#id05",{color:"green",scale:2})
+    .from("#id04",{color:"red",opacity:0,duration:5000})
+    
+      </script>
+</body>
+</html>
